@@ -20,11 +20,11 @@ ecr-login:
 
 .PHONY: build
 build:
-	docker build -t $(ECR_BASE)/$(SERVICE_NAME):$(IMAGE_TAG) .
+	@echo "No Dockerfile for this service — uses upstream image. Skipping build."
 
 .PHONY: push
-push: ecr-login build
-	docker push $(ECR_BASE)/$(SERVICE_NAME):$(IMAGE_TAG)
+push:
+	@echo "No Dockerfile for this service — uses upstream image. Skipping push."
 
 .PHONY: k8s-auth
 k8s-auth:
