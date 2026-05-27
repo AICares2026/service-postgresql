@@ -1,5 +1,5 @@
 service:
-  name: postgresql
+  name: service-postgresql
   namespace: aicares
 image:
   repository: 952893849914.dkr.ecr.us-east-1.amazonaws.com/aicares-application/postgresql
